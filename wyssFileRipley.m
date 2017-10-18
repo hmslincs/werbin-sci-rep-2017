@@ -1,24 +1,29 @@
 function [ fullpath ] = wyssFileRipley( file, varargin )
-%exchangePaintAnalysis
-%   Takes a base directory and creates a list of .mat files that are
-%   associate with a single exchangePaint image, then aligns them and
-%   preforms some data analysis
-%   
+% wyssFileRipley calculates Spatial statistics for localization contain in a file  
 %
 % Inputs:
-%           file, points to a .mat file that contains a PointList of aligned localization movies
-%                
+%           file, a filename for a .mat file that contains an aligned PointList
 %
-%Optional:
-%
-%
-%Output: 
+% Outputs: 
 %        fullpath: the path to a .mat files containing the results
 %
 %
-%Written by Jeffrey Werbin 
-%Harvard Medical School 2014/04/16
+% Written by Jeffrey Werbin, Ph.D. 
+% Harvard Medical School 2014/04/16
 %
+
+% Copyright (C) 2017, Danuser Lab - UTSouthwestern 
+% This file is part of u-track.
+% u-track is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+% u-track is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+% You should have received a copy of the GNU General Public License
+% along with u-track.  If not, see <http://www.gnu.org/licenses/>. 
 
 ip = inputParser;
 

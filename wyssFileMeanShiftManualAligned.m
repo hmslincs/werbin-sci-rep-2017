@@ -1,9 +1,36 @@
 function success = wyssFileMeanShiftManualAligned(PointList, name,varargin)
-% Takes a cell array containing localization data, merges them into a single
-% matrix, applies meanshift clustering to the data and then saves it to 
-% a file with the name +'_MeanShiftClustering.mat'
-% 
+% wyssFileMeanShiftManualAligned takes a cell array containing localization 
+% data, merges them into a single matrix, applies meanshift clustering to 
+% the data and then saves it to a file with the name +'_MeanShiftClustering.mat'
+%
+% Inputs:
+%    PointList, a cell array with all localization information for an image
+%         name, base filename for output
+%
+% Optional:
+%        bandW, the bandwidth in pixels to use for MeanShiftClustering
+%
+% Outputs:
+%        a file with the name name+'_MeanShiftClustering.mat' that contains
+%        the clusterInfo, clusterMap and an array containing all 
+%        localization positions
+%
+% Written by Jeffrey Werbin, Ph.D.
+% Harvard Medical School 2014
+%
 
+% Copyright (C) 2017, Danuser Lab - UTSouthwestern 
+% This file is part of u-track.
+% u-track is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+% u-track is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+% You should have received a copy of the GNU General Public License
+% along with u-track.  If not, see <http://www.gnu.org/licenses/>. 
 
 ip=inputParser;
 ip.CaseSensitive=false;

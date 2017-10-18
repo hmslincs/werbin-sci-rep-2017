@@ -1,5 +1,32 @@
 function [clusterInfo] = addToClusterInfo(clusterInfo,points,varargin)
-% addToClusterInfo add analysis to the results of meanshift clustering
+% addToClusterInfo computes extra information for each cluster in clusterInfo 
+% For each cluster the x-y coordianate of the points in the cluster, the 
+% cluster area in um and the convex hull are added to clusterInfo
+%
+% Inputs:
+%    clusterInfo, struct that is the result of meanshift clustering
+%         points, the n x 2 array that was used to generate clusterInfo 
+%
+% Outputs: 
+%    clusterInfo, similar to the above struct with extra infomation added
+%
+%
+% Writen by Jeffrey Werbin, Ph.D. 
+% Harvard Medical School, 2014
+%
+
+% Copyright (C) 2017, Danuser Lab - UTSouthwestern 
+% This file is part of u-track.
+% u-track is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+% u-track is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+% You should have received a copy of the GNU General Public License
+% along with u-track.  If not, see <http://www.gnu.org/licenses/>. 
 
 ip = inputParser;
 ip.CaseSensitive=false;

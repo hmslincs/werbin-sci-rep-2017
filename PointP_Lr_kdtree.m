@@ -1,22 +1,32 @@
 function [Lr]=PointP_Lr_kdtree(pos,r)
-%PointP_Lr_Cross takes two related point processes and evaulates
-% the average number of points in posB that are with a distance of r(i) from a
-% point in posA.
+% PointP_Lr_kdtree takes a point process and calculates Besag's L statistic
 % Implemented using KDtreeBallQuery.
 %
-%Inputs: 
-%       posA, reference postion list (nx2)
-%       posB, queried list (mx2)
-%          r, a vector of radii to consider
+% Inputs: 
+%       pos, reference postion list (nx2)
+%         r, a vector of radii to consider
 %
-%Outputs:
+% Outputs:
 %       Lr, the Lr statistic for 
 %
-%Jeffrey L. Werbin
-%Harvard Medical School
+% Jeffrey L. Werbin
+% Harvard Medical School
 %
-%Last Update: 9/30/2013
+% Last Update: 9/30/2013
 %
+
+% Copyright (C) 2017, Danuser Lab - UTSouthwestern 
+% This file is part of u-track.
+% u-track is free software: you can redistribute it and/or modify
+% it under the terms of the GNU General Public License as published by
+% the Free Software Foundation, either version 3 of the License, or
+% (at your option) any later version.
+% u-track is distributed in the hope that it will be useful,
+% but WITHOUT ANY WARRANTY; without even the implied warranty of
+% MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+% GNU General Public License for more details.
+% You should have received a copy of the GNU General Public License
+% along with u-track.  If not, see <http://www.gnu.org/licenses/>. 
 
 %edge = 1-(4/(3*pi))*((r/L)+(r/W))+((11/(3*pi))-1)*(r^2/(L*W));
 edge=1;
